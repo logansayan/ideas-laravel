@@ -2,6 +2,17 @@
     &__heading {
         @include defaultSectionHeading;
     }
+
+    &__add {
+        font-size: 5rem;
+        width: fit-content;
+        color: $color-primary-2;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $color-primary-dark;
+        }
+    }
 }
 
 .notes__container {
@@ -36,5 +47,9 @@
     &__body {
         font-size: 1.5rem;
         font-style: italic;
+    }
+
+    &__created {
+        color: $color-primary-2;
     }
 }

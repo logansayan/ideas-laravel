@@ -15,10 +15,25 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.6;
-  color: #30292f; }
+  color: #413f54; }
+
+.flash {
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff101f;
+  padding: 0.5rem 1rem; }
 
 .section-default-padding {
   padding: 5rem 0; }
+
+.d-block {
+  display: block !important; }
+
+.text-center {
+  text-align: center !important; }
 
 .text-right {
   text-align: right !important; }
@@ -26,17 +41,41 @@ body {
 .text-italic {
   font-style: italic !important; }
 
+.mb-2 {
+  margin-bottom: 2rem !important; }
+
 .mb-3 {
   margin-bottom: 3rem !important; }
 
 .mt-1 {
   margin-top: 1rem !important; }
 
+.mt-2 {
+  margin-top: 2rem !important; }
+
+.mt-3 {
+  margin-top: 3rem !important; }
+
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important; }
+
+.ml-auto {
+  margin-left: auto !important; }
+
 .notes__heading {
   text-align: center;
   font-size: 4rem;
   font-weight: 300;
   text-transform: uppercase; }
+
+.notes__add {
+  font-size: 5rem;
+  width: fit-content;
+  color: #5f5aa2;
+  transition: color 0.2s; }
+  .notes__add:hover {
+    color: #30292f; }
 
 .notes__container {
   display: grid;
@@ -62,6 +101,8 @@ body {
   .note__body {
     font-size: 1.5rem;
     font-style: italic; }
+  .note__created {
+    color: #5f5aa2; }
 
 .note__item {
   margin-top: 5rem;
@@ -84,3 +125,48 @@ body {
     .note__item--created span {
       font-weight: 400;
       font-style: normal; }
+
+.add__heading {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase; }
+
+.add__form {
+  width: 40%; }
+  .add__form ::placeholder {
+    color: #7d7d7d;
+    font-family: "Nunito"; }
+  .add__form textarea {
+    resize: vertical;
+    min-height: 15rem;
+    font-size: 1.8rem; }
+  .add__form--input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #30292f;
+    border-radius: 3px;
+    font-size: 2.3rem;
+    outline: none;
+    color: inherit; }
+  .add__form--submit {
+    font-size: 5rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #413f54;
+    transition: color 0.2s, text-shadow 0.2s; }
+    .add__form--submit:hover {
+      color: #5f5aa2;
+      text-shadow: 0 0.1rem 1rem #5f5aa2; }
+
+.add__buttons {
+  display: flex;
+  justify-content: space-between; }
+  .add__buttons--back {
+    font-size: 5rem;
+    color: #413f54;
+    transition: color 0.2s, text-shadow 0.2s; }
+    .add__buttons--back:hover {
+      color: #ff101f;
+      text-shadow: 0 0.1rem 1rem #ff101f; }

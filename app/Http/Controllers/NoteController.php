@@ -26,4 +26,19 @@ class NoteController extends Controller
         return view("notes.add");
     }
 
+    // STORE NOTE TO DATABASE
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            "title" => "",
+            "body" => ""
+        ]);
+
+        if (!$formFields["title"] == "" && !$formFields["body"] == "") {
+            Note::create($formFields);
+            return redirect("/")->with("message", $formFields["body"] . "added!");
+        } else {
+            return redirect(route("notes.add"))->with("message", "You must provide atleast one of the fields");
+        }
+    }
+
 }

@@ -17,8 +17,10 @@ use App\Http\Controllers\NoteController;
 // INDEX PAGE
 Route::get("/", [NoteController::class, "index"])->name("notes.index");
 
+
 // SHOW PAGE
-Route::get("/notes/{note}", [NoteController::class, "show"])->name("notes.show");
+Route::get("/notes/{note}", [NoteController::class, "show"])->name("notes.show")->where('note', '[0-9]+');
 
 // ADD NOTE PAGE
-Route::get("/notes/add", [NoteController::class, "add"])->name("notes.add");
+Route::get("notes/add", [NoteController::class, "add"])->name("notes.add");
+Route::post("/notes/add", [NoteController::class, "store"])->name("notes.store");

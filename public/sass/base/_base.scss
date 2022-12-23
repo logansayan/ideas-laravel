@@ -16,5 +16,15 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.6;
-    color: $color-primary-dark;
+    color: $color-primary-1;
+}
+
+.flash {
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color-primary-red;
+    padding: 0.5rem 1rem;
 }

@@ -17,6 +17,6 @@
       @endforeach
     </div>
 
-    <a href={{route("notes.add")}} class="notes__add"><i class="fa-solid fa-plus"></i></a>
+    <a href={{route("notes.add")}} class="notes__add text-center d-block mt-3 mx-auto"><i class="fa-solid fa-plus"></i></a>
   </section>
 @endsection
