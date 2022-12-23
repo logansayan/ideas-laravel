@@ -1,0 +1,40 @@
+.notes {
+    &__heading {
+        @include defaultSectionHeading;
+    }
+}
+
+.notes__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+.note {
+    border: 3px solid $color-primary-1;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $color-primary-2;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__body {
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+}

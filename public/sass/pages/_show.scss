@@ -1,0 +1,27 @@
+.note__item {
+    margin-top: 5rem;
+    text-align: center;
+
+    &--heading {
+        @include defaultSectionHeading;
+        text-transform: none;
+    }
+
+    &--body {
+        font-size: 2rem;
+        max-width: 70%;
+        margin: 0 auto;
+        font-style: italic;
+        margin-bottom: 2rem;
+    }
+
+    &--created {
+        font-weight: 300;
+        font-style: italic;
+
+        span {
+            font-weight: 400;
+            font-style: normal;
+        }
+    }
+}

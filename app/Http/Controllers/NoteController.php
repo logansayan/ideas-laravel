@@ -7,9 +7,23 @@ use Illuminate\Http\Request;
 
 class NoteController extends Controller
 {
-    public function index() {
+    // SHOW INDEX PAGE
+    public function index(Note $note) {
         return view("notes.index", [
-            "notes" => Note::latest()->get()
+            "notes" => $note::latest()->get()
         ]);
     }
+
+    // SHOW SINGLE NOTE PAGE
+    public function show(Note $note) {
+        return view("notes.show", [
+            "note" => $note
+        ]);
+    }
+
+    // SHOW ADD PAGE
+    public function add() {
+        return view("notes.add");
+    }
+
 }

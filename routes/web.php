@@ -14,8 +14,11 @@ use App\Http\Controllers\NoteController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// INDEX PAGE
 Route::get("/", [NoteController::class, "index"])->name("notes.index");
+
+// SHOW PAGE
+Route::get("/notes/{note}", [NoteController::class, "show"])->name("notes.show");
+
+// ADD NOTE PAGE
+Route::get("/notes/add", [NoteController::class, "add"])->name("notes.add");

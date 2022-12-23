@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #30292f; }
+
+.section-default-padding {
+  padding: 5rem 0; }
+
+.text-right {
+  text-align: right !important; }
+
+.text-italic {
+  font-style: italic !important; }
+
+.mb-3 {
+  margin-bottom: 3rem !important; }
+
+.mt-1 {
+  margin-top: 1rem !important; }
+
+.notes__heading {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase; }
+
+.notes__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 5rem; }
+
+.note {
+  border: 3px solid #413f54;
+  border-radius: 3px;
+  padding: 0.5rem 1rem; }
+  .note__link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s; }
+    .note__link:hover {
+      color: #5f5aa2; }
+  .note__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem; }
+  .note__body {
+    font-size: 1.5rem;
+    font-style: italic; }
+
+.note__item {
+  margin-top: 5rem;
+  text-align: center; }
+  .note__item--heading {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-transform: none; }
+  .note__item--body {
+    font-size: 2rem;
+    max-width: 70%;
+    margin: 0 auto;
+    font-style: italic;
+    margin-bottom: 2rem; }
+  .note__item--created {
+    font-weight: 300;
+    font-style: italic; }
+    .note__item--created span {
+      font-weight: 400;
+      font-style: normal; }
