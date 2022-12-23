@@ -7,6 +7,18 @@
     display: block !important;
 }
 
+.d-flex {
+    display: flex !important;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
 // TYPOGRAPHY
 .text-center {
     text-align: center !important;

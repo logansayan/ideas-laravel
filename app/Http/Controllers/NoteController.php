@@ -35,10 +35,17 @@ class NoteController extends Controller
 
         if (!$formFields["title"] == "" && !$formFields["body"] == "") {
             Note::create($formFields);
-            return redirect("/")->with("message", $formFields["body"] . "added!");
+            return redirect("/")->with("message", $formFields["body"] . " was added!");
         } else {
             return redirect(route("notes.add"))->with("message", "You must provide atleast one of the fields");
         }
+    }
+
+    // DELETE NOTE
+    public function delete(Note $note) {
+        $title = $note->title;
+        $note->delete();
+        return redirect("/")->with("message", $title . " was deleted successfully!");
     }
 
 }

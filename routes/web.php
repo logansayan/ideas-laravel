@@ -24,3 +24,5 @@ Route::get("/notes/{note}", [NoteController::class, "show"])->name("notes.show")
 // ADD NOTE PAGE
 Route::get("notes/add", [NoteController::class, "add"])->name("notes.add");
 Route::post("/notes/add", [NoteController::class, "store"])->name("notes.store");
+
+Route::delete("/notes/{note}/delete", [NoteController::class, "delete"])->name("notes.delete");

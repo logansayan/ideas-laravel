@@ -49,6 +49,21 @@
         font-style: italic;
     }
 
+    &__delete {
+        &--submit {
+            background-color: transparent;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.2s;
+            color: $color-primary-3;
+
+            &:hover {
+                color: $color-primary-red;
+            }
+        }
+    }
+
     &__created {
         color: $color-primary-2;
     }
