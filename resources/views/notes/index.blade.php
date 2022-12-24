@@ -1,9 +1,10 @@
 @extends('base')
 
 @section('content')
+  <x-nav />
 
   <section class="notes section-default-padding">
-    <h1 class="notes__heading section-heading">Your Ideas</h1>
+    {{-- <h1 class="notes__heading section-heading">Your Ideas</h1> --}}
 
     <div class="notes__container">
       @foreach ($notes as $note)

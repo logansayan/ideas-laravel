@@ -1,0 +1,11 @@
+.nav {
+    margin-top: 2rem;
+    padding: 0 5rem;
+    &__logo {
+        text-align: center;
+
+        i {
+            font-size: 8rem;
+        }
+    }
+}

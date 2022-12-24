@@ -87,6 +87,14 @@ body {
 .ml-auto {
   margin-left: auto !important; }
 
+.nav {
+  margin-top: 2rem;
+  padding: 0 5rem; }
+  .nav__logo {
+    text-align: center; }
+    .nav__logo i {
+      font-size: 8rem; }
+
 .notes__heading {
   text-align: center;
   font-size: 4rem;
