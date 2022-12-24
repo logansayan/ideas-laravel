@@ -25,4 +25,9 @@ Route::get("/notes/{note}", [NoteController::class, "show"])->name("notes.show")
 Route::get("notes/add", [NoteController::class, "add"])->name("notes.add");
 Route::post("/notes/add", [NoteController::class, "store"])->name("notes.store");
 
+// DELETE NOTE ROUTE
 Route::delete("/notes/{note}/delete", [NoteController::class, "delete"])->name("notes.delete");
+
+// EDIT NOTE ROUTE
+Route::get("/notes/{note}/edit", [NoteController::class, "edit"])->name("notes.edit");
+Route::put("/notes/{note}/edit", [NoteController::class, "update"])->name("notes.update");

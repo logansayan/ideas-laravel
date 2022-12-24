@@ -38,6 +38,9 @@ body {
 .justify-content-between {
   justify-content: space-between; }
 
+.justify-content-center {
+  justify-content: center; }
+
 .align-items-center {
   align-items: center; }
 
@@ -49,6 +52,18 @@ body {
 
 .text-italic {
   font-style: italic !important; }
+
+.mr-1 {
+  margin-right: 1rem; }
+
+.mr-2 {
+  margin-right: 2rem; }
+
+.mr-3 {
+  margin-right: 3rem; }
+
+.mr-4 {
+  margin-right: 4rem; }
 
 .mb-2 {
   margin-bottom: 2rem !important; }
@@ -120,6 +135,15 @@ body {
     color: #355691; }
     .note__delete--submit:hover {
       color: #ff101f; }
+  .note__edit--submit {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    color: #355691; }
+    .note__edit--submit:hover {
+      color: #413f54; }
   .note__created {
     color: #5f5aa2; }
 
