@@ -11,7 +11,7 @@
     <textarea name="body" class="add__form--input d-block mx-auto" placeholder="Text goes here..">{{$note->body}}</textarea>
 
     <div class="add__buttons">
-      <a href="/" class="add__buttons--back"><i class="fa-solid fa-angle-left"></i></a>
+      <a href="{{url()->previous()}}" class="add__buttons--back"><i class="fa-solid fa-angle-left"></i></a>
       <button class="add__form--submit ml-auto text-center"><i class="fa-solid fa-check"></i></button>
     </div>
   </form>

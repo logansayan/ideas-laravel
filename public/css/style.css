@@ -94,6 +94,9 @@ body {
     text-align: center; }
     .nav__logo i {
       font-size: 8rem; }
+  .nav__link {
+    text-decoration: none;
+    color: inherit; }
 
 .notes__heading {
   text-align: center;
