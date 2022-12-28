@@ -11,6 +11,10 @@
         <button type="submit"><i class="fa-solid fa-arrow-right-from-bracket" style="font-size: 2rem"></i></button>
       </form>
     </li>
+
+  @else
+
+  <li class="nav__link">Never let your awesome ideas fade away!</li>
   @endauth
   </ul>
 </div>

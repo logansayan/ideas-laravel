@@ -49,7 +49,6 @@ textarea {
   width: 100%;
   padding: 1rem;
   border: 1px solid #30292f;
-  border-radius: 3px;
   font-size: 2.3rem;
   outline: none;
   color: inherit;
@@ -164,7 +163,7 @@ button {
     box-shadow: 0.3rem 0.3rem 0 currentColor; }
   .auth button {
     border: 3px solid #5f5aa2;
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     font-size: 2rem;
     color: #5f5aa2;
     transition: box-shadow 0.2s; }
