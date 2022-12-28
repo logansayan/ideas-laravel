@@ -35,9 +35,13 @@ class NoteController extends Controller
 
         if (!$formFields["title"] == "" && !$formFields["body"] == "") {
             Note::create($formFields);
-            return redirect("/")->with("message", "\"" . $formFields["body"] . "\" was added!");
+            return redirect("/")
+                ->with("message", "\"" . $formFields["body"] . "\" was added!")
+                ->with("bgColor", "var(--success)");
         } else {
-            return redirect(route("notes.add"))->with("message", "You must provide atleast one of the fields");
+            return redirect(route("notes.add"))
+                ->with("message", "You must provide atleast one of the fields")
+                ->with("bgColor", "var(--warning)");
         }
     }
 
@@ -45,7 +49,9 @@ class NoteController extends Controller
     public function delete(Note $note) {
         $title = $note->title;
         $note->delete();
-        return redirect("/")->with("message", "\"" . $title . "\" was deleted successfully!");
+        return redirect("/")
+            ->with("message", "\"" . $title . "\" was deleted successfully!")
+            ->with("bgColor", "var(--danger)");
     }
 
     // SHOW EDIT NOTE
@@ -61,7 +67,9 @@ class NoteController extends Controller
 
         $note->update($formFields);
 
-        return redirect("/")->with("message", "Saved changes!");
+        return redirect("/")
+            ->with("message", "Saved changes!")
+            ->with("bgColor", "var(--success)");
     }
 
 }

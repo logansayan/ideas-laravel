@@ -1,0 +1,38 @@
+.auth {
+    width: 40%;
+    margin: 0 auto;
+
+    input {
+        transition: box-shadow 0.2s;
+    }
+
+    input:focus {
+        box-shadow: 0.3rem 0.3rem 0 currentColor;
+    }
+
+    button {
+        border: 3px solid $color-primary-2;
+        padding: 0.5rem 1rem;
+        font-size: 2rem;
+        color: $color-primary-2;
+        transition: box-shadow 0.2s;
+
+        &:hover {
+            text-shadow: none;
+            box-shadow: 0.3rem 0.3rem 0 currentColor;
+        }
+    }
+}
+
+.auth__heading {
+    @include defaultSectionHeading;
+}
+
+.auth__buttons {
+    display: flex;
+    align-items: center;
+
+    a {
+        color: $color-primary-2;
+    }
+}

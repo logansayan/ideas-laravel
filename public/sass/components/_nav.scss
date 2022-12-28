@@ -1,11 +1,31 @@
 .nav {
     margin-top: 2rem;
-    padding: 0 5rem;
+    width: 80%;
+
+    &__links {
+        list-style: none;
+
+        button {
+            &:hover {
+                color: $color-primary-red;
+                text-shadow: none;
+            }
+        }
+    }
+
     &__logo {
-        text-align: center;
+        // text-align: center;
 
         i {
-            font-size: 8rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            font-size: 6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
     }
 

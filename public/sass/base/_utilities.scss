@@ -11,8 +11,16 @@
     display: flex !important;
 }
 
+.d-inline {
+    display: inline;
+}
+
 .justify-content-between {
     justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
 }
 
 .justify-content-center {
@@ -81,4 +89,8 @@
 
 .ml-auto {
     margin-left: auto !important;
+}
+
+.ml-1 {
+    margin-left: 1rem;
 }
