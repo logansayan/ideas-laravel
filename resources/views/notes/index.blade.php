@@ -7,7 +7,8 @@
     {{-- <h1 class="notes__heading section-heading">Your Ideas</h1> --}}
 
     <div class="notes__container">
-      @foreach ($notes as $note)
+      @if (count($notes) > 0)
+        @foreach ($notes as $note)
         <div class="note">
           <a href={{route("notes.show", ['note' => $note->id])}} class="note__link">
             <h2 class="note__title">{{(strlen($note->title) > 30) ? substr($note->title,0,30).'...' : $note->title}}</h2>
@@ -22,10 +23,13 @@
               </form>
             </div>
             </a>
-        </div>
-      @endforeach
-    </div>
-
+          </div>
+        @endforeach
+      </div>
+    @else
+      <h2 class="text-center">You don't have any notes</h2>
+      <p class="text-center">Add a note by clicking the + button!</p>
+    @endif
     <a href={{route("notes.add")}} class="notes__add text-center d-block mt-3 mx-auto"><i class="fa-solid fa-plus"></i></a>
   </section>
 @endsection

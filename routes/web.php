@@ -29,18 +29,23 @@ Route::post("/logout", [UserController::class, "logout"])->name("users.logout")-
 // INDEX PAGE
 Route::get("/", [NoteController::class, "index"])->name("notes.index")->middleware("auth");
 
-// SHOW PAGE
-Route::get("/notes/{note}", [NoteController::class, "show"])->name("notes.show")->where('note', '[0-9]+')->middleware("auth");
 
-// ADD NOTE PAGE
-Route::get("notes/add", [NoteController::class, "add"])->name("notes.add")->middleware("auth");
-Route::post("/notes/add", [NoteController::class, "store"])->name("notes.store")->middleware("auth");
 
-// DELETE NOTE ROUTE
-Route::delete("/notes/{note}/delete", [NoteController::class, "delete"])->name("notes.delete")->middleware("auth");
+Route::group(["prefix"=>"notes","middleware"=>"auth"],function () {
+//Route::prefix("notes")->group(function () {
+  // SHOW PAGE
+  Route::get("{note}", [NoteController::class, "show"])->name("notes.show")->where('note', '[0-9]+')->middleware("auth");
+  // ADD NOTE PAGE
+  Route::get("add", [NoteController::class, "add"])->name("notes.add")->middleware("auth");
+  Route::post("add", [NoteController::class, "store"])->name("notes.store")->middleware("auth");
 
-// EDIT NOTE ROUTE
-Route::get("/notes/{note}/edit", [NoteController::class, "edit"])->name("notes.edit")->middleware("auth");
-Route::put("/notes/{note}/edit", [NoteController::class, "update"])->name("notes.update")->middleware("auth");
+  // DELETE NOTE ROUTE
+  Route::delete("{note}/delete", [NoteController::class, "delete"])->name("notes.delete")->middleware("auth");
+
+  // EDIT NOTE ROUTE
+  Route::get("{note}/edit", [NoteController::class, "edit"])->name("notes.edit")->middleware("auth");
+  Route::put("{note}/edit", [NoteController::class, "update"])->name("notes.update")->middleware("auth");
+});
+
 
 // Route::get("/test", [UserController::class, "test"]);

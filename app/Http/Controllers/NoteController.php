@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class NoteController extends Controller
 {
     // SHOW INDEX PAGE
-    public function index(Note $note) {
+    public function index() {
         return view("notes.index", [
-            "notes" => $note::latest()->get()
+            "notes" => auth()->user()->notes()->get()
         ]);
     }
 
@@ -32,6 +32,8 @@ class NoteController extends Controller
             "title" => "",
             "body" => ""
         ]);
+
+        $formFields["user_id"] = auth()->id();
 
         if (!$formFields["title"] == "" && !$formFields["body"] == "") {
             Note::create($formFields);

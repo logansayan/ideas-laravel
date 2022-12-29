@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Note extends Model
 {
     use HasFactory;
-    protected $fillable = ["title", "body"];
+    protected $fillable = ["user_id", "title", "body"];
 
     // RELATION TO USER
     public function user() {
